@@ -638,6 +638,10 @@ details[open] summary::after {
   gap: 40px;
 }
 
+.project-index {
+  margin: 0 0 36px;
+}
+
 .project-card {
   padding: clamp(28px, 5vw, 56px);
   background: var(--paper);

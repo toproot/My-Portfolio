@@ -245,8 +245,15 @@ function App() {
             <SectionHeading
               eyebrow="Selected cases"
               title="대표 프로젝트와 주요 성과"
-              description="문제, 역할, 행동, 결과의 흐름으로 이력서에 확인되는 사례를 정리했습니다."
+              description="웹 서비스·AI 업무지원부터 설비 연계와 해외 현장 구축까지, 담당 역할과 수행 내용·결과를 구분했습니다."
             />
+            <ul className="tag-list project-index" aria-label="프로젝트 바로가기">
+              {profile.projects.map((project, index) => (
+                <li key={project.id}>
+                  <a href={`#${project.id}`}>{String(index + 1).padStart(2, '0')} · {project.title}</a>
+                </li>
+              ))}
+            </ul>
             <div className="project-list">
               {profile.projects.map((project, index) => (
                 <ProjectCard project={project} index={index} key={project.id} />
